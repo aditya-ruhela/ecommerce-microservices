@@ -1,0 +1,19 @@
+server:
+  port: 8081 # We run on 8081 so it doesn't clash with other default apps
+
+spring:
+  application:
+    name: order-service
+  
+  # Database Connection Details
+  datasource:
+    url: "jdbc:postgresql://localhost:5432/order-db?options=-c%20timezone=UTC"
+    username: admin
+    password: password
+    driver-class-name: org.postgresql.Driver
+
+  # Spring Magic: Automatically create our tables based on our Java models
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true

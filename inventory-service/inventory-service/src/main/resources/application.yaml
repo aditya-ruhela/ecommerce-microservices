@@ -1,0 +1,15 @@
+server:
+  port: 8082
+
+spring:
+  datasource:
+    url: "jdbc:postgresql://localhost:5432/order-db?options=-c%20timezone=UTC"
+    username: admin
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: update
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      group-id: inventory-group
