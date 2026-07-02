@@ -2,11 +2,14 @@ server:
   port: 8082
 
 spring:
+  application:
+    name: inventory-service
   datasource:
-    url: "jdbc:postgresql://localhost:5432/order-db?options=-c%20timezone=UTC"
+    url: jdbc:postgresql://localhost:5432/ecommerce-db
     username: admin
     password: password
   jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
       ddl-auto: update
   kafka:

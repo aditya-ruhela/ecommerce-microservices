@@ -7,7 +7,7 @@ spring:
   
   # Database Connection Details
   datasource:
-    url: "jdbc:postgresql://localhost:5432/order-db?options=-c%20timezone=UTC"
+    url: jdbc:postgresql://localhost:5432/ecommerce-db?options=-c%20timezone=UTC
     username: admin
     password: password
     driver-class-name: org.postgresql.Driver
